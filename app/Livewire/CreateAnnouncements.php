@@ -8,6 +8,7 @@ use App\Models\Announcements;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
+use Livewire\WithFileUploads;
 
 class CreateAnnouncements extends Component
 {
@@ -24,14 +25,27 @@ class CreateAnnouncements extends Component
     #[Validate('required', message: 'Il campo è obligatorio.')]
     public $category;
 
+    public $img;
+
+    use WithFileUploads;
+
     public function store(){
+
+         
+         $imgPath = 'public/img/default-image.jpg';
+
+        if($this->img){
+
+            $imgPath = $this->img->store('public/img');
+        }
 
         Announcement::create([
             'title'=>$this->title,
             'body'=>$this->body,
             'price'=>$this->price,
             'user_id' => Auth::user()->id,
-            'category_id' => $this->category
+            'category_id' => $this->category,
+            'img' => $imgPath,
         ]);
 
         /* messaggio di errore direttamente con livewire */

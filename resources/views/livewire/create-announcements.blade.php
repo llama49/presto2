@@ -11,7 +11,9 @@
                 @endif
 
                 <form class="shadow rounded-5 p-5 bg-dark-subtle"
-                wire:submit="store" {{-- con questa sintassi vado a richiamare la funzione store al submit del bottone del form --}}
+                wire:submit="store"
+                enctype="multipart/form-data"
+                {{-- con questa sintassi vado a richiamare la funzione store al submit del bottone del form --}}
                 >
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo articolo</label>
@@ -37,6 +39,12 @@
                         <input wire:model.blur="price" type="number" class="form-control" id="price">
                         <div class="text-danger">@error('price') {{ $message }} @enderror</div>{{-- nuovo metodo di gestione degli errori per il client --}}
                     </div>
+                    <div class="mb-3">
+                        <label for="img" class="form-label">Inserisci l'immagine</label>
+                        <input wire:model="img" type="file" class="form-control" id="img">
+                    </div>
+
+
 
                     <button type="submit" class="btn btn-primary">Crea articolo</button>
                 </form>
