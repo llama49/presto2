@@ -1,3 +1,7 @@
 <x-layout>
-    <livewire:create-announcements/>
+
+    <livewire:create-announcements
+
+    />
+
 </x-layout>

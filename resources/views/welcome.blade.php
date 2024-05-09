@@ -1,4 +1,5 @@
 <x-layout>
+    @auth
 
     <div class="container">
         <div class="row">
@@ -7,4 +8,5 @@
             </div>
         </div>
     </div>
+    @endauth
 </x-layout>
