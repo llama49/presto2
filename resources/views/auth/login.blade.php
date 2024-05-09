@@ -12,7 +12,7 @@
                 <label for="password_confirmation" class="form-label">Password</label>
                 <input type="password" name="password" class="form-control" id="password_confirmation">
               </div>
-              <button type="submit" class="btn btn_custom">Accedi</button>
+              <button type="submit" class="btn btn-outline-light">Accedi</button>
             </form>
             <div class=" my-4">
               <a class="text-white" href="{{route('register')}}">Non hai un account? Registrati!</a>
