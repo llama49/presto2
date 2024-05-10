@@ -1,7 +1,7 @@
 <div>
 
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             @foreach ($announcements as $announcement)
             <div class="col-12 col-lg-3">
                 <div class="card" style="width: 18rem;">

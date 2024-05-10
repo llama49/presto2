@@ -1,0 +1,61 @@
+:root{
+    --det-color: #26547C;
+    --sec-color: #6BC4BA;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+.my_title{
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+}
+
+.navbar{
+    background-color: white;
+    border-bottom: 3px solid var(--det-color);
+    box-shadow: 2px 2px 10px darkgray;
+}
+
+.profilo{
+    color: var(--det-color);
+}
+
+.btn{
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: var(--sec-color);
+    color: white;
+}
+
+/* MASTHEAD */
+.masthead {
+    height: 40vh;
+    min-height: 400px;
+    border-bottom: 3px solid var(--det-color);
+    box-shadow: 2px 2px 10px darkgray;
+}
+
+.bottone_annuncio{
+    background-color: var(--det-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+.bordo{
+    color: var(--det-color);
+    border-bottom: 3px solid var(--sec-color);
+}
+
+.link_custom{
+    transition: 0.4s;
+}
+
+.link_custom:hover{
+    color: var(--sec-color);
+    transform: scale(1.1);
+}

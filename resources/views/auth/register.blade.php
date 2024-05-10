@@ -2,6 +2,7 @@
     <div class="container mt-5">
         <div class="row justify-content-center ">
           <div class="col-12 col-md-6">
+            <h2 class="my_title text-center mb-3">REGISTRATI</h2>
             <form class="p-3 shadow rounded bg-secondary-subtle" method="post" action="{{route('register')}}">
               @csrf
               <div class="mb-3">
@@ -20,7 +21,7 @@
                 <label for="password_confirmation" class="form-label">Conferma Password</label>
                 <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
               </div>
-              <button type="submit" class="btn btn-outline-light">Registrati</button>
+              <button type="submit" class="btn bottone_annuncio d-block mx-auto">Registrati</button>
             </form>
           </div>
         </div>

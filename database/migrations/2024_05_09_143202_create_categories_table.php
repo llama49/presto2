@@ -27,8 +27,9 @@ return new class extends Migration
             "Sport e tempo libero",
             "Abbigliamento e accessori",
             "Animali",
-            "Servizi",
-            "Tempo libero e hobby"
+            "Collezionismo",
+            "Arte",
+            "Strumenti Musicali"
           ];
 
           foreach ($categories as $category) {
