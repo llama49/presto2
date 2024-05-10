@@ -31,7 +31,8 @@ class CreateAnnouncements extends Component
 
     public function store(){
 
-         
+         $this->validate();
+
          $imgPath = 'public/img/default-image.jpg';
 
         if($this->img){

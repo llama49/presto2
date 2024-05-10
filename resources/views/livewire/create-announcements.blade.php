@@ -3,13 +3,13 @@
         <div class="row justify-content-center">
             <h3 class="text-center mb-4 my_title">INSERISCI ANNUNCIO</h3>
             <div class="col-12 col-md-8">
-                
+
                 @if (session('message'))
                 <div class="alert rounded-3  alert-success">
                     {{ session('message') }}
                 </div>
                 @endif
-                
+
                 <form class="shadow rounded-5 p-5 bg-dark-subtle"
                 wire:submit="store"
                 enctype="multipart/form-data"
@@ -26,12 +26,14 @@
                     <div class="text-danger">@error('body') {{ $message }} @enderror</div>
                 </div>
                 <div class="mb-3">
+                    <label class="form-label">Categorie</label>
                     <select class="form-select" wire:model="category" aria-label="Default select example">
-                        <option>Seleziona la categoria</option>
+                        <option>Seleziona categoria</option>
                         @foreach ($categories as $category)
                         <option  value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                     </select>
+                    <div class="text-danger">@error('category') {{ $message }} @enderror</div>
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Prezzo</label>
