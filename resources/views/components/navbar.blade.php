@@ -12,7 +12,7 @@
           <a class="nav-link fw-bold link_custom" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold link_custom" href="#">Tutti gli annunci</a>
+          <a class="nav-link fw-bold link_custom" href="{{route('index.announcements')}}">Tutti gli annunci</a>
         </li>
       </ul>
       <div class="dropdown d-block ms-auto">
