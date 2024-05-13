@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnnouncementsController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,3 +13,5 @@ Route::get('show/announcements/{announcement}', [AnnouncementsController::class 
 
 /* Rotta per vedere tutti gli articoli */
 Route::get('index/announcements/', [AnnouncementsController::class , 'indexAnnouncements'])->name('index.announcements');
+
+Route::get('index/categories/{category}', [CategoryController::class, 'indexCategory'])->name('index.category');

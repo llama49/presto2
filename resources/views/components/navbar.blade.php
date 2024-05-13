@@ -14,6 +14,17 @@
         <li class="nav-item">
           <a class="nav-link fw-bold link_custom" href="{{route('index.announcements')}}">Tutti gli annunci</a>
         </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle link_custom  fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorie
+          </a>
+          <ul class="dropdown-menu">
+            @foreach ($categories as $category )
+            <li><a class="dropdown-item" href="{{route('index.category', compact('category'))}}">{{$category->name}}</a></li>
+            @endforeach
+          </ul>
+        </li>
+          
       </ul>
       <div class="dropdown d-block ms-auto">
         <button class="btn" type="button" data-bs-toggle="dropdown">
