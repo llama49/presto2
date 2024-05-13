@@ -34,7 +34,7 @@ body{
 /* MASTHEAD */
 .masthead {
     height: 40vh;
-    min-height: 420px;
+    min-height: 500px;
     border-bottom: 3px solid var(--det-color);
     box-shadow: 2px 2px 10px darkgray;
 }
@@ -87,6 +87,10 @@ body{
 
 .nav-link.show{
 color: var(--sec-color) !important;
+}
+
+.navbar-toggler:focus{
+    box-shadow: 0px 0px 10px var(--det-color) !important;
 }
 
 .card{
