@@ -1,5 +1,5 @@
 <div>
-    
+
     <div class="container">
         <div class="row">
             <div class="col-2 d-none d-lg-inline mt-5 mb-3">
@@ -8,7 +8,7 @@
             <div class="col-12 col-lg-8 mt-5 mb-3">
                 <h2 class="my_title text-center">DETTAGLI ANNUNCIO</h2>
             </div>
-            <div class="col-12 col-lg-8 d-flex justify-content-center mb-5">
+            <div class="col-12 col-lg-8 position-relative justify-content-center mb-5">
                 {{-- CAROSELLO --}}
                 {{-- <div id="carouselExampleIndicators" class="carousel slide w-100 position-relative mt-3">
                     <div class="carousel-indicators">
@@ -38,7 +38,68 @@
                     <div class="badge_logo">
                         <img class="ms-3 py-2" src="/storage/img/Presto.png" width="100" alt="">
                     </div>
-                </div> --}} 
+                </div> --}}
+
+                {{-- swiper --}}
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class=" w-75 swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                  <div thumbsSlider="" class=" w-75 mt-2 swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                      </div>
+                    </div>
+                  </div>
+
             </div>
             <div class="col-12 col-lg-4 mt-5 d-flex flex-column justify-content-between">
                 {{-- NOME E PREZZO --}}
@@ -56,5 +117,5 @@
             </div>
         </div>
     </div>
-    
+
 </div>
