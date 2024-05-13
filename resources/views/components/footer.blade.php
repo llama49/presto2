@@ -9,15 +9,15 @@
 
     <ul class="nav pe-5 col-md-4 justify-content-end list-unstyled d-md-flex mx-auto me-md-0">
       <li class="ms-3"><a class="text-body-secondary" href="#">
-        <i class="bi bi-facebook fs-2"></i>
+        <i class="bi bi-facebook fs-2 text-primary"></i>
       </a>
     </li>
     <li class="ms-3"><a class="text-body-secondary" href="#">
-      <i class="bi bi-instagram fs-2"></i>
+      <i class="bi bi-instagram fs-2 text-danger"></i>
     </a>
   </li>
   <li class="ms-3"><a class="text-body-secondary" href="#">
-    <i class="bi bi-twitter-x fs-2"></i>
+    <i class="bi bi-twitter-x fs-2 text-black"></i>
   </a>
   </li>
 </ul>

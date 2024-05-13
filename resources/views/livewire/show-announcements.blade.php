@@ -10,7 +10,7 @@
             </div>
             <div class="col-12 col-lg-8 d-flex justify-content-center mb-5">
                 {{-- CAROSELLO --}}
-                <div id="carouselExampleIndicators" class="carousel slide position-relative w-75 mt-3">
+                {{-- <div id="carouselExampleIndicators" class="carousel slide w-100 position-relative mt-3">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -38,7 +38,7 @@
                     <div class="badge_logo">
                         <img class="ms-3 py-2" src="/storage/img/Presto.png" width="100" alt="">
                     </div>
-                </div>
+                </div> --}} 
             </div>
             <div class="col-12 col-lg-4 mt-5 d-flex flex-column justify-content-between">
                 {{-- NOME E PREZZO --}}

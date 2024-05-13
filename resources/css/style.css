@@ -77,6 +77,13 @@ body{
     }
 }
 
+@media screen and (min-width: 200px) and (max-width: 992px) {
+    .link_custom2{
+        color: var(--sec-color);
+        transform: scale(1) !important;
+    }
+}
+
 .bottone_annuncio{
     background-color: var(--det-color);
     color: white;
