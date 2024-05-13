@@ -4,7 +4,7 @@
         <div class="row mt-5 justify-content-center">
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-5 col-lg-3 my-3">
-                <div class="card d-block mx-auto" style="width: 18rem;">
+                <div class="card d-block mx-auto" >
                     <img src="{{Storage::url($announcement->img)}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}}</h5>

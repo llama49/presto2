@@ -65,6 +65,11 @@ body{
     transform: scale(1.1);
 }
 
+.link_custom2{
+    color: var(--sec-color);
+    transform: scale(1.1);
+}
+
 .badge_logo{
     position: absolute;
     bottom: 5px;
@@ -78,4 +83,16 @@ body{
 
 .carousel-control-next-icon{
     transform: scale(2);
+}
+
+.nav-link.show{
+color: var(--sec-color) !important;
+}
+
+.card{
+    transition: 0.4s;
+}
+
+.card:hover{
+    transform: scale(1.06);
 }

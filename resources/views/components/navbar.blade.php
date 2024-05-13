@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link fw-bold link_custom" aria-current="page" href="{{route('welcome')}}">Home</a>
+          <a class="nav-link fw-bold link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold link_custom" href="{{route('index.announcements')}}">Tutti gli annunci</a>
+          <a class="nav-link fw-bold link_custom @if (Route::currentRouteName()== 'index.announcements') link_custom2 @endif" href="{{route('index.announcements')}}">Tutti gli annunci</a>
         </li>
         <li class="nav-item dropdown ">
-          <a class="nav-link dropdown-toggle link_custom  fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle link_custom fw-bold @if (Route::currentRouteName()== 'index.category') link_custom2 @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorie
           </a>
           <ul class="dropdown-menu">

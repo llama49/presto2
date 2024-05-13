@@ -10,7 +10,7 @@
             <h2 class="my_title text-center">{{$category->name}}</h2>
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-5 col-lg-3 my-3">
-                <div class="card shadow d-block mx-auto" style="width: 18rem;">
+                <div class="card shadow d-block mx-auto" >
                     <img src="{{Storage::url($announcement->img)}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}}</h5>
