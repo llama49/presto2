@@ -2,9 +2,9 @@
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-12 text-center mt-3">
-        <img class="d-none d-lg-inline" src="/storage/img/aggiungiArticolo.png" width="300" alt="">
+        <!-- <img class="d-none d-lg-inline" src="/storage/img/aggiungiArticolo.png" width="300" alt="">
         <img src="/storage/img/aggiungiCarrello.png" width="300" alt="">
-        <img class="d-none d-lg-inline" src="/storage/img/riceviArticolo.png" width="300" alt="">
+        <img class="d-none d-lg-inline" src="/storage/img/riceviArticolo.png" width="300" alt=""> -->
         @auth
           <h2 class="my_title fw-light mt-3 fs-1 ">Ciao {{Auth::user()->name}}!</h2>
         @endauth
