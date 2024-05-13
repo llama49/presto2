@@ -7,7 +7,7 @@
       <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Call of Code, Inc</span>
     </div>
 
-    <ul class="nav pe-5 col-md-4 justify-content-end list-unstyled d-flex">
+    <ul class="nav pe-5 col-md-4 justify-content-end list-unstyled d-md-flex mx-auto me-md-0">
       <li class="ms-3"><a class="text-body-secondary" href="#">
         <i class="bi bi-facebook fs-2"></i>
       </a>

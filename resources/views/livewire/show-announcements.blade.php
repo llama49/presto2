@@ -42,14 +42,14 @@
             </div>
             <div class="col-12 col-lg-4 mt-5 d-flex flex-column justify-content-between">
                 {{-- NOME E PREZZO --}}
-                <div>
+                <div class="p-3">
                     <h4>{{$announcement->category->name}}</h4>
                     <hr>
                     <h2 class="fw-bold mb-5">{{$announcement->title}}</h2>
                     <p class="fs-2 mb-3">{{$announcement->price}}€</p>
                     <p class="">{{$announcement->body}}</p>
                 </div>
-                <div class="mb-5">
+                <div class="mb-5 p-3">
                     <p>Creato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                     <p>Inserzionista: {{$announcement->user->name}}</p>
                 </div>
