@@ -15,3 +15,6 @@ Route::get('show/announcements/{announcement}', [AnnouncementsController::class 
 Route::get('index/announcements/', [AnnouncementsController::class , 'indexAnnouncements'])->name('index.announcements');
 
 Route::get('index/categories/{category}', [CategoryController::class, 'indexCategory'])->name('index.category');
+
+// Ricerca Annunci
+Route::get('search/announcements', [AnnouncementsController::class, 'searchAnnouncements'])->name('search.announcements');
