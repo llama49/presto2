@@ -24,7 +24,14 @@
             @endforeach
           </ul>
         </li>
-          
+        @if(Auth::user()->is_revisor)
+        <li class="nav-item">
+          <a class="nav-link fw-bold link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('revisor.index')}}">Lavora con noi
+            <span>{{App\Models\Announcement::toBeRevisionedCount()}} <span> messaggi non letti</span>
+          </span>
+          </a>
+        </li>
+        @endif
       </ul>
       <div class="dropdown d-block ms-auto">
         <button class="btn" type="button" data-bs-toggle="dropdown">
