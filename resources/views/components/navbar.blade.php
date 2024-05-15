@@ -24,7 +24,6 @@
             @endforeach
           </ul>
         </li>
-        @if(Auth::user() && Auth::user()->is_revisor)
         @if (Auth::user() && Auth::user()->is_revisor)
         <li class="nav-item">
           <a class="nav-link fw-bold link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('revisor.index')}}">Lavora con noi
