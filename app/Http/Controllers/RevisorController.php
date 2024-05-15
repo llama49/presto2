@@ -14,9 +14,11 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        $announcement_to_check = Announcement::where('is_accepted', null)->first();
+        $announcements = Announcement::where('is_accepted', null)->get()->toArray();
 
-        return view('revisor.index', compact('announcement_to_check'));
+        $announcements_checked = Announcement::where('is_accepted', true)->get()->toArray();
+
+        return view('revisor.index', compact('announcements', 'announcements_checked'));
 
     }
 
@@ -24,7 +26,7 @@ class RevisorController extends Controller
     {
         $announcement->setAccepted(true);
 
-        return redirect()->back()->with(`message`, `Hai accettato l'annuncio`);
+        return redirect()->back()->with('message', 'Hai accettato l\'annuncio');
 
     }
 
@@ -32,7 +34,15 @@ class RevisorController extends Controller
     {
         $announcement->setAccepted(false);
 
-        return redirect()->back()->with(`message`, `Hai rifiutato l'annuncio`);
+        return redirect()->back()->with('message', 'Hai rifiutato l\'annuncio');
+
+    }
+
+    public function undoAnnouncement(Announcement $announcement)
+    {
+        $announcement->setAccepted(null);
+
+        return redirect()->back()->with('message', 'Hai ripristinato la revisione');
 
     }
 
