@@ -26,7 +26,8 @@ class AnnouncementsController extends Controller
     }
 
     public function searchAnnouncements(Request $request){
-        $announcements = Announcement::search($request->searched)->get();
+
+        $announcements = Announcement::search($request->searched)->where("is_accepted", true)->get();
 
         return view('announcements.index', compact('announcements'));
 
