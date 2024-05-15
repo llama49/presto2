@@ -17,7 +17,6 @@ Route::get('index/announcements/', [AnnouncementsController::class , 'indexAnnou
 
 Route::get('index/categories/{category}', [CategoryController::class, 'indexCategory'])->name('index.category');
 
-<<<<<<< HEAD
 
 /* torre revisore */
 Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
@@ -27,7 +26,6 @@ Route::patch('accepted/announcement{announcement}', [RevisorController::class, '
 
 /* rifiuta annuncio */
 Route::patch('refuses/announcement{announcement}', [RevisorController::class, 'refusesAnnouncement'])->name('revisor.refuses_Announcement');
-=======
+
 // Ricerca Annunci
 Route::get('search/announcements', [AnnouncementsController::class, 'searchAnnouncements'])->name('search.announcements');
->>>>>>> refs/remotes/origin/main
