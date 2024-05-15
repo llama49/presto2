@@ -18,8 +18,9 @@ Route::get('index/announcements/', [AnnouncementsController::class , 'indexAnnou
 Route::get('index/categories/{category}', [CategoryController::class, 'indexCategory'])->name('index.category');
 
 
+
 /* torre revisore */
-Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index')->middleware('isRevisor');
 
 /* accetta annuncio */
 Route::patch('accepted/announcement{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_Announcement');
@@ -29,3 +30,9 @@ Route::patch('refuses/announcement{announcement}', [RevisorController::class, 'r
 
 // Ricerca Annunci
 Route::get('search/announcements', [AnnouncementsController::class, 'searchAnnouncements'])->name('search.announcements');
+
+// Lavora con noi
+Route::get('work/workwithus', [RevisorController::class, 'becomeRevisor'])->name('work.revisor')->middleware('auth');
+
+// Rendi utente revisore
+Route::get('rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
