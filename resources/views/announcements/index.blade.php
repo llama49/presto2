@@ -1,5 +1,5 @@
 <x-layout>
-
+    
     <div class="container">
         <div class="row mt-5 justify-content-center">
           @forelse ($announcements as $announcement)
