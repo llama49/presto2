@@ -23,7 +23,7 @@
 </ul>
 <div class="col-6">
   <p>lavora con noi</p>
-  <a href="{{route('work.revisor')}}">Lavora con noi</a>
+  <a href="{{route('work.withUs')}}">Lavora con noi</a>
 </div>
 </footer>
 </div>

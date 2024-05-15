@@ -35,7 +35,9 @@ Route::patch('undo/announcement{announcement}', [RevisorController::class, 'undo
 Route::get('search/announcements', [AnnouncementsController::class, 'searchAnnouncements'])->name('search.announcements');
 
 // Lavora con noi
-Route::get('work/workwithus', [RevisorController::class, 'becomeRevisor'])->name('work.revisor')->middleware('auth');
+Route::post('work/workwithus', [RevisorController::class, 'becomeRevisor'])->name('work.revisor')->middleware('auth');
+Route::get('work/withus', [RevisorController::class, 'workWithUs'])->name('work.withUs')->middleware('auth');
+
 
 // Rendi utente revisore
 Route::get('rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
