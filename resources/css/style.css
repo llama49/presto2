@@ -5,17 +5,30 @@
 
 body{
     font-family: "Montserrat", sans-serif;
+    background-color: #f9fafa;
+}
+
+.tiffany{
+    color: var(--sec-color) !important;
+}
+
+.form_dati{
+    height: 56vh;
 }
 
 .my_title{
-    font-family: "Jost", sans-serif;
+    font-family: "Wix Madefor Display", sans-serif;
     font-weight: 500;
 }
 
 .navbar{
     background-color: white;
-    border-bottom: 3px solid var(--det-color);
     box-shadow: 2px 2px 10px darkgray;
+    height: 200px;
+}
+
+.posizione_link{
+    margin-left: -220px;
 }
 
 .profilo{
@@ -35,19 +48,12 @@ body{
 .masthead {
     height: 40vh;
     min-height: 500px;
-    border-bottom: 3px solid var(--det-color);
     box-shadow: 2px 2px 10px darkgray;
-    background-image: url('../img/masthead.jpg');
-    background-size: cover;
+    background-color: darkgray;
+    background-image: url(../../storage/app/public/video/video_masthead.mp4);
     background-repeat: no-repeat;
-    background-position: 0px -80px;
-}
-
-.sfondo_hero{
-    background-color: rgba(178, 178, 178, 0.8);
-    width: 80%;
-    border-radius: 25px;
-    box-shadow: 2px 2px 10px black;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -55,11 +61,10 @@ body{
     .masthead {
         height: 40vh;
         min-height: 500px;
-        border-bottom: 3px solid var(--det-color);
         box-shadow: 2px 2px 10px darkgray;
-        background-image: url('../img/masthead.jpg');
-        background-size: cover;
+        background-image: url(../../storage/app/public/video/video_masthead.mp4);
         background-repeat: no-repeat;
+        background-size: cover;
         background-position: center;
     }
 }
@@ -70,10 +75,10 @@ body{
         min-height: 500px;
         border-bottom: 3px solid var(--det-color);
         box-shadow: 2px 2px 10px darkgray;
-        background-image: url('../img/masthead.jpg');
-        background-size: cover;
+        background-image: url(../../storage/app/public/video/video_masthead.mp4);
         background-repeat: no-repeat;
-        background-position: -450px 0px;
+        background-size: cover;
+        background-position: center;
     }
 }
 
@@ -82,23 +87,49 @@ body{
         color: var(--sec-color);
         transform: scale(1) !important;
     }
+    .posizione_link{
+        margin-left: 0px;
+    }
 }
 
 .bottone_annuncio{
-    background-color: var(--det-color);
-    color: white;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
     padding: 10px 15px;
-    border-radius: 25px;
+    border-radius: 1px;
+}
+
+.bottone_annuncio2{
+    width: 130px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 5px 0px ;
+    border-radius: 1px;
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    left: 90px;
 }
 
 .bottone_indietro{
-    border: 2px solid var(--det-color);
-    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 5px 12px;
+    border-radius: 1px;
 }
 
+.form_bordi{
+    border-bottom: 2px solid var(--sec-color);
+}
+
+
 .bordo{
-    color: var(--det-color);
-    border-bottom: 3px solid var(--sec-color);
+    border-bottom: 2px solid var(--sec-color);
 }
 
 .link_custom{
@@ -131,7 +162,7 @@ body{
 }
 
 .nav-link.show{
-color: var(--sec-color) !important;
+    color: var(--sec-color) !important;
 }
 
 .navbar-toggler:focus{
@@ -140,8 +171,36 @@ color: var(--sec-color) !important;
 
 .card{
     transition: 0.4s;
+    border: none !important;
+    background-color: transparent;
+}
+
+.card-img-top{
+    border-radius: 0px;
 }
 
 .card:hover{
     transform: scale(1.06);
+}
+
+.riga_body{
+    width: 50px !important;
+}
+
+.bottone_annuncio3{
+    border: 1px solid black;
+    width: 40px;
+}
+
+.table2 {
+    border: none;
+}
+
+.table th,
+.table td {
+    border: none;
+}
+
+.table{
+    --bs-table-bg: #f9fafa;
 }

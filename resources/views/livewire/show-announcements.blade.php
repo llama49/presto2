@@ -3,42 +3,12 @@
     <div class="container">
         <div class="row">
             <div class="col-2 d-none d-lg-inline mt-5 mb-3">
-                <a href="{{route('welcome')}}" class="btn bottone_indietro">← Indietro</a>
+                <a href="{{url()->previous()}}" class="btn bottone_indietro">← Indietro</a>
             </div>
             <div class="col-12 col-lg-8 mt-5 mb-3">
                 <h2 class="my_title text-center">DETTAGLI ANNUNCIO</h2>
             </div>
             <div class="col-12 col-lg-8 position-relative justify-content-center mb-5">
-                {{-- CAROSELLO --}}
-                {{-- <div id="carouselExampleIndicators" class="carousel slide w-100 position-relative mt-3">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/300" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/301" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/302" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                    <div class="badge_logo">
-                        <img class="ms-3 py-2" src="/storage/img/Presto.png" width="100" alt="">
-                    </div>
-                </div> --}}
 
                 {{-- swiper --}}
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class=" w-75 swiper mySwiper2">

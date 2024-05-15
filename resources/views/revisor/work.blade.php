@@ -2,26 +2,26 @@
 
 
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <form class="shadow rounded-5 p-5 bg-dark-subtle"
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-6">
+                <form class="shadow p-5 bg-trasparent"
                 action="{{route('work.revisor')}}"
                 method="POST"
                 >
                 @csrf
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome</label>
-                    <input name="name" value="{{Auth::user()->name}}" type="text" class="form-control" id="name">
+                    <input name="name" value="{{Auth::user()->name}}" type="text" class="form-control shadow form_bordi" id="name">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Inserisci Email</label>
-                    <input name="email"  value="{{Auth::user()->email}}" type="email" class="form-control" id="email">
+                    <input name="email"  value="{{Auth::user()->email}}" type="email" class="form-control shadow form_bordi" id="email">
                 </div>
                 <div class="mb-3">
                     <label for="body" class="form-label">Perchè vuoi lavorare con noi?</label>
-                    <textarea name="body" class="form-control" id="body" cols="30" rows="8"></textarea>
+                    <textarea name="body" class="form-control shadow form_bordi" id="body" cols="30" rows="8"></textarea>
                 </div>
-                    <button type="submit" class="btn bottone_annuncio">Invia domanda</button>
+                    <button type="submit" class="btn bottone_annuncio2">Invia</button>
             </form>
             </div>
         </div>

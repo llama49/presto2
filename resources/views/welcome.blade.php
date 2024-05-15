@@ -1,5 +1,6 @@
 <x-layout>
 
+    <x-masthead/>
 
     @if (session('access.denied'))
     <div class="alert rounded-3  alert-success">

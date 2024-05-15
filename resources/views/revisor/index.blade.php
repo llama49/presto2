@@ -1,5 +1,5 @@
 <x-layout>
-    
+    {{-- @dd($announcements) --}}
     @if (session('message'))
     <div class="alert rounded-3  alert-success">
         {{ session('message') }}
@@ -20,29 +20,45 @@
     @if($announcements)
     <div class="container my-5">
         <div class="row">
-            @foreach ($announcements as $announcement)
-            <div class="col-12 col-lg-4">
-                <div class="card shadow d-block mx-auto my-3" >
-                    <img src="{{Storage::url($announcement['img'])}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$announcement['title']}}</h5>
-                        <p class="card-text text-truncate">{{$announcement['body']}}</p>
-                        <p class="card-text">{{$announcement['price']}}$</p>
-                        <a href="" class="btn bottone_annuncio d-block mx-auto">Scopri di piú</a>
-                        <form action="{{route('revisor.accept_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
-                            @csrf
-                            @method("PATCH")
-                            <button type="submit" >Accetta</button>
-                        </form>
-                        <form action="{{route('revisor.refuses_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
-                            @csrf
-                            @method("PATCH")
-                            <button type="submit" >Rifiuta</button>
-                        </form>
-                    </div>
-                </div>
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="riga_body" scope="col">#</th>
+                            <th class="riga_body" scope="col">Titolo</th>
+                            <th class="riga_body" scope="col">Prezzo</th>
+                            <th class="riga_body" scope="col">Data creazione</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($announcements as $announcement)
+                        <tr class="border-bottom">
+                            <th scope="row">{{$announcement['id']}}</th>
+                            <td>{{$announcement['title']}}</td>
+                            <td>{{$announcement['price']}}$</td>
+                            <td>{{\Carbon\Carbon::parse($announcement['created_at'])->format('d/m/Y') }}</td>
+                            <td class="riga_body">
+                                <a href="{{route('show.announcements', ['announcement' => $announcement['id']])}}" class="btn bottone_annuncio3 d-block mx-auto"><i class="bi bi-eye"></i></a>
+                            </td>
+                            <td class="riga_body">
+                                <form action="{{route('revisor.accept_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
+                                    @csrf
+                                    @method("PATCH")
+                                    <button class="btn btn-success d-block mx-auto" type="submit" ><i class="bi bi-check2"></i></button>
+                                </form>
+                            </td>
+                            <td class="riga_body">
+                                <form action="{{route('revisor.refuses_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
+                                    @csrf
+                                    @method("PATCH")
+                                    <button class="btn btn-danger d-block mx-auto" type="submit" ><i class="bi bi-x-lg"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
-            @endforeach
         </div>
     </div>
     @endif
@@ -58,29 +74,44 @@
             </div>
         </div>
     </div>
-    @if($announcements_checked)
+    @if($announcements)
     <div class="container my-5">
         <div class="row">
-            @foreach ($announcements_checked as $announcement)
-            <div class="col-12 col-lg-4">
-                <div class="card shadow d-block mx-auto my-3" >
-                    <img src="{{Storage::url($announcement['img'])}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$announcement['title']}}</h5>
-                        <p class="card-text text-truncate">{{$announcement['body']}}</p>
-                        <p class="card-text">{{$announcement['price']}}$</p>
-                        <a href="" class="btn bottone_annuncio d-block mx-auto">Scopri di piú</a>
-                        <form action="{{route('revisor.undo_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
-                            @csrf
-                            @method("PATCH")
-                            <button type="submit" >Annulla revisione</button>
-                        </form>
-                    </div>
-                </div>
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="riga_body" scope="col">#</th>
+                            <th class="riga_body" scope="col">Titolo</th>
+                            <th class="riga_body" scope="col">Prezzo</th>
+                            <th class="riga_body" scope="col">Data creazione</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($announcements_checked as $announcement)
+                        <tr class="border-bottom">
+                            <th scope="row">{{$announcement['id']}}</th>
+                            <td>{{$announcement['title']}}</td>
+                            <td>{{$announcement['price']}}$</td>
+                            <td>{{\Carbon\Carbon::parse($announcement['created_at'])->format('d/m/Y') }}</td>
+                            <td class="riga_body">
+                                <a href="{{route('show.announcements', ['announcement' => $announcement['id']])}}" class="btn bottone_annuncio3 d-block mx-auto"><i class="bi bi-eye"></i></a>
+                            </td>
+                            <td class="riga_body">
+                                <form action="{{route('revisor.undo_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
+                                    @csrf
+                                    @method("PATCH")
+                                    <button class="btn btn-warning" type="submit" >Annulla revisione</button>
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
-            @endforeach
         </div>
     </div>
     @endif
-    
+
+
 </x-layout>

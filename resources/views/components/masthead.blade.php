@@ -1,21 +1,18 @@
 <header class="masthead">
   <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-12 text-center mt-3">
-        <!-- <img class="d-none d-lg-inline" src="/storage/img/aggiungiArticolo.png" width="300" alt="">
-        <img src="/storage/img/aggiungiCarrello.png" width="300" alt="">
-        <img class="d-none d-lg-inline" src="/storage/img/riceviArticolo.png" width="300" alt=""> -->
-        <div data-aos="zoom-in" data-aos-duration="2000" class="sfondo_hero pt-3 d-block mx-auto">
+    <div class="row h-100">
+      <div class="col-12 mt-3 text-center">
+        <div data-aos="zoom-in" data-aos-duration="2000" class="d-block mx-auto">
           @auth
-            <h2 class="my_title fw-light mt-3 mb-5 fs-1">Ciao {{Auth::user()->name}}!</h2>
+            <h2 class="my_title fw-light mt-3 fs-3">Ciao {{Auth::user()->name}}!</h2>
           @endauth
           @guest
-            <h2 class="my_title fw-light mt-3 mb-5 fs-1">Benvenuto</h2>
+            <h2 class="my_title fw-light fs-3">Benvenuto</h2>
           @endguest
-            <h1 class="fw-light mt-3 mb-5 my_title">Sei in cerca di un affare? Fai <strong class="bordo" >Presto.it</strong></h1>
+            <h1 class="fw-light my_title fs-3">Sei in cerca di un affare? Fai <strong class="bordo" >Presto.it</strong></h1>
           <a href="@if (Auth::user())
             {{route('create.announcements')}}@else{{route('register')}}
-            @endif" class="btn bottone_annuncio mb-5">Inserisci annuncio</a>
+            @endif" class="btn bottone_annuncio mt-3">Inserisci annuncio</a>
         </div>
       </div>
     </div>
