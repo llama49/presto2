@@ -11,7 +11,7 @@
         <div class="row mt-5 justify-content-center">
             <h2 class="my_title text-center">{{$category->name}}</h2>
             @foreach ($announcements as $announcement)
-            <div class="col-12 col-md-5 col-lg-3 my-3">
+            <div class="col-8 col-md-5 col-lg-3 my-3">
                 <div class="card d-block mx-auto p-3" >
                     <img src="{{Storage::url($announcement->img)}}" class="card-img-top shadow" alt="...">
                     <div class="card-body">
