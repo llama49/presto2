@@ -5,7 +5,7 @@
     {{-- @dd($category) --}}
     @if ($announcements->isEmpty())
     
-    <h3 class="text-center mt-5 mb-5">Non ci sono annunci per questa categoria</h3>
+    <h3 class="text-center mt-5 mb-5">{{__('ui.noCategory')}}</h3>
     @else
     <div class="container ">
         <div class="row mt-5 justify-content-center">
@@ -18,7 +18,7 @@
                         <h5 class="card-title">{{$announcement->title}}</h5>
                         <p class="card-text text-truncate">{{$announcement->body}}</p>
                         <p class="card-text">{{$announcement->price}}$</p>
-                        <a href="{{route('show.announcements', compact('announcement'))}}" class="btn bottone_annuncio2 d-block mx-auto">Scopri di piú</a>
+                        <a href="{{route('show.announcements', compact('announcement'))}}" class="btn bottone_annuncio2 d-block mx-auto">{{__('ui.show')}}</a>
                     </div>
                 </div>
             </div>

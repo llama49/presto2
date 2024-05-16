@@ -10,18 +10,18 @@
                 >
                 @csrf
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nome</label>
+                    <label for="name" class="form-label">{{__('ui.name')}}</label>
                     <input name="name" value="{{Auth::user()->name}}" type="text" class="form-control shadow form_bordi" id="name">
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Inserisci Email</label>
+                    <label for="email" class="form-label">{{__('ui.insert')}} Email</label>
                     <input name="email"  value="{{Auth::user()->email}}" type="email" class="form-control shadow form_bordi" id="email">
                 </div>
                 <div class="mb-3">
-                    <label for="body" class="form-label">Perchè vuoi lavorare con noi?</label>
+                    <label for="body" class="form-label">{{__('ui.workWithUs')}}</label>
                     <textarea name="body" class="form-control shadow form_bordi" id="body" cols="30" rows="8"></textarea>
                 </div>
-                    <button type="submit" class="btn bottone_annuncio2">Invia</button>
+                    <button type="submit" class="btn bottone_annuncio2">{{__('ui.send')}}</button>
             </form>
             </div>
         </div>

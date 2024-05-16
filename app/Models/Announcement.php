@@ -22,6 +22,7 @@ class Announcement extends Model
     // TRATTO DI LARAVEL SCOUT (RICERCA)
     use Searchable;
 
+
     public function toSearchableArray()
     {
         $category = $this->category;

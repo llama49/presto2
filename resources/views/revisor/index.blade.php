@@ -17,9 +17,9 @@
         <div class="row">
             <div class="col-12 mt-5">
                 @if ($announcements)
-                <h1 class="text-center">Ecco gli annunci da revisionare</h1>
+                <h1 class="text-center">{{__('ui.revisorAnnouncement')}}</h1>
                 @else
-                <h1 class="text-center">Non ci sono annunci da revisionare</h1>
+                <h1 class="text-center">{{__('ui.noRevisorAnnouncement')}}</h1>
                 @endif
             </div>
         </div>
@@ -32,9 +32,9 @@
                     <thead>
                         <tr>
                             <th class="riga_body" scope="col">#</th>
-                            <th class="riga_body" scope="col">Titolo</th>
-                            <th class="riga_body" scope="col">Prezzo</th>
-                            <th class="riga_body" scope="col">Data creazione</th>
+                            <th class="riga_body" scope="col">{{__('ui.title')}}</th>
+                            <th class="riga_body" scope="col">{{__('ui.price')}}</th>
+                            <th class="riga_body" scope="col">{{__('ui.creation')}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,9 +74,9 @@
         <div class="row">
             <div class="col-12">
                 @if ($announcements_checked)
-                <h1 class="text-center">Ecco gli annunci revisionati</h1>
+                <h1 class="text-center">{{__('ui.revisor1')}}</h1>
                 @else
-                <h1 class="text-center">Non ci sono annunci revisionati</h1>
+                <h1 class="text-center">{{__('ui.revisor2')}}</h1>
                 @endif
             </div>
         </div>
@@ -89,9 +89,9 @@
                     <thead>
                         <tr>
                             <th class="riga_body" scope="col">#</th>
-                            <th class="riga_body" scope="col">Titolo</th>
-                            <th class="riga_body" scope="col">Prezzo</th>
-                            <th class="riga_body" scope="col">Data creazione</th>
+                            <th class="riga_body" scope="col">{{__('ui.title')}}</th>
+                            <th class="riga_body" scope="col">{{__('ui.price')}}</th>
+                            <th class="riga_body" scope="col">{{__('ui.creation')}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -108,7 +108,7 @@
                                 <form action="{{route('revisor.undo_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
                                     @csrf
                                     @method("PATCH")
-                                    <button class="btn btn-warning" type="submit" >Annulla revisione</button>
+                                    <button class="btn btn-warning" type="submit" >{{__('ui.cancelReview')}}</button>
                                 </form>
                             </td>
                         </tr>
