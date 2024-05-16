@@ -1,10 +1,10 @@
 <x-layout>
-    
-    <x-masthead/>
-    
+
+    <x-masthead />
+
     {{-- @dd($category) --}}
     @if ($announcements->isEmpty())
-    
+
     <h3 class="text-center mt-5 mb-5">Non ci sono annunci per questa categoria</h3>
     @else
     <div class="container ">
@@ -12,8 +12,15 @@
             <h2 class="my_title text-center">{{$category->name}}</h2>
             @foreach ($announcements as $announcement)
             <div class="col-8 col-md-5 col-lg-3 my-3">
-                <div class="card d-block mx-auto p-3" >
-                    <img src="{{Storage::url($announcement->img)}}" class="card-img-top shadow" alt="...">
+                <div class="card d-block mx-auto p-3">
+                    @if (count($announcement->images))
+
+                    <img src="{{Storage::url($announcement->images->first()->path)}}" class="card-img-top shadow" alt="...">
+
+                    @else
+                    <img src="{{Storage::url('public/img/default-image.jpg')}}" class="card-img-top shadow" alt="...">
+
+                    @endif
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}}</h5>
                         <p class="card-text text-truncate">{{$announcement->body}}</p>
@@ -26,5 +33,5 @@
         </div>
     </div>
     @endif
-    
+
 </x-layout>
