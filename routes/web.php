@@ -41,3 +41,6 @@ Route::get('work/withus', [RevisorController::class, 'workWithUs'])->name('work.
 
 // Rendi utente revisore
 Route::get('rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+// Cambio lingua
+Route::post('lingua/{lang}', [PublicController::class, 'setLocale'])->name('set.locale');

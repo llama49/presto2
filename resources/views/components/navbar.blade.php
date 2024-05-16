@@ -40,6 +40,20 @@
             </li>
           </ul>
         </div>
+        <div>
+
+          <ul>
+            <li class="nav-item">
+              <x-_locale lang="it" />
+            </li>
+            <li class="nav-item">
+              <x-_locale lang="es" />
+            </li>
+            <li class="nav-item">
+              <x-_locale lang="en" />
+            </li>
+          </ul>
+        </div>
         <div class="dropdown d-flex ms-auto">
           <button class="btn" type="button" data-bs-toggle="dropdown">
             <i class="bi bi-person-circle fs-2"></i>
