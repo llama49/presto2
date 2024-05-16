@@ -20,13 +20,13 @@
                         <h5 class="card-title">{{$announcement->title}}</h5>
                         <p class="card-text text-truncate">{{$announcement->body}}</p>
                         <p class="card-text">{{$announcement->price}}$</p>
-                        <a href="{{route('show.announcements', compact('announcement'))}}" class="btn bottone_annuncio2 d-block mx-auto">Scopri di piú</a>
+                        <a href="{{route('show.announcements', compact('announcement'))}}" class="btn bottone_annuncio2 d-block mx-auto">{{__('ui.show')}}</a>
                     </div>
                 </div>
             </div>
             @empty
             <div class="col-12">
-                <h3 class="my-5 text-center ">La tua ricerca non ha prodotto risultati</h3>
+                <h3 class="my-5 text-center ">{{__('ui.noResults')}}</h3>
             </div>
         </div>
         @endforelse

@@ -26,11 +26,11 @@
               <a class="nav-link link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('welcome')}}">Home</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link link_custom @if (Route::currentRouteName()== 'index.announcements') link_custom2 @endif" href="{{route('index.announcements')}}">Tutti gli annunci</a>
+              <a class="nav-link link_custom @if (Route::currentRouteName()== 'index.announcements') link_custom2 @endif" href="{{route('index.announcements')}}">{{__('ui.indexAnnouncements')}}</a>
             </li>
             <li class="nav-item dropdown mx-3">
               <a class="nav-link dropdown-toggle link_custom @if (Route::currentRouteName()== 'index.category') link_custom2 @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorie
+                {{__('ui.category')}}
               </a>
               <ul class="dropdown-menu">
                 @foreach ($categories as $category )
@@ -62,7 +62,7 @@
             
             @if (Auth::user() && Auth::user()->is_revisor)
             <li class="nav-item ps-4 border-bottom">
-              <a class="nav-link my-2 position-relative  link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('revisor.index')}}">Richieste
+              <a class="nav-link my-2 position-relative  link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.requests')}}
                 <span class="translate-middle badge rounded-pill bg-danger">
                   {{App\Models\Announcement::toBeRevisionedCount()}}
                   <span class="visually-hidden">unread messages</span>
@@ -72,8 +72,8 @@
             @endif
             
             @guest
-            <li class="nav-item"><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
-            <li class="nav-item"><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
             @endguest
             
             @auth
@@ -83,7 +83,7 @@
               action="{{route('logout')}}">
               @csrf
               <i class="bi bi-box-arrow-left fs-3 ms-3 text-danger"></i>
-              <button class="dropdown-item text-danger" type="submit">Logout</button>
+              <button class="dropdown-item text-danger" type="submit">{{__('ui.logout')}}</button>
             </form></li>
             @endauth
           </ul>
