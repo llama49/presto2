@@ -3,10 +3,10 @@
     <div class="container">
         <div class="row">
             <div class="col-2 d-none d-lg-inline mt-5 mb-3">
-                <a href="{{url()->previous()}}" class="btn bottone_indietro">← Indietro</a>
+                <a href="{{url()->previous()}}" class="btn bottone_indietro">← {{__('ui.back')}}</a>
             </div>
             <div class="col-12 col-lg-8 mt-5 mb-3">
-                <h2 class="my_title text-center">DETTAGLI ANNUNCIO</h2>
+                <h2 class="my_title text-center">{{__('ui.detailAnnouncement')}}</h2>
             </div>
             <div class="col-12 col-lg-8 position-relative justify-content-center mb-5">
 
@@ -59,8 +59,8 @@
                     <p class="">{{$announcement->body}}</p>
                 </div>
                 <div class="mb-5 p-3">
-                    <p>Creato il: {{$announcement->created_at->format('d/m/Y')}}</p>
-                    <p>Inserzionista: {{$announcement->user->name}}</p>
+                    <p>{{__('ui.createdAt')}}: {{$announcement->created_at->format('d/m/Y')}}</p>
+                    <p>{{__('ui.advertiser')}}: {{$announcement->user->name}}</p>
                 </div>
             </div>
         </div>

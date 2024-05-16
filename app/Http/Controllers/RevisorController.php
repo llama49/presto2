@@ -18,7 +18,9 @@ class RevisorController extends Controller
 
         $announcements_checked = Announcement::where('is_accepted', true)->get()->toArray();
 
-        return view('revisor.index', compact('announcements', 'announcements_checked'));
+        $announcements_refused = Announcement::where('is_accepted', false)->get()->toArray();
+
+        return view('revisor.index', compact('announcements', 'announcements_checked', 'announcements_refused'));
 
     }
 

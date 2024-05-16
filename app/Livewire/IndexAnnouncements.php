@@ -12,7 +12,7 @@ class IndexAnnouncements extends Component
 
     public function mount()
     {
-        $this->announcements = Announcement::orderBy('created_at', 'desc')->take(4)->get();
+        $this->announcements = Announcement::orderBy('created_at', 'desc')->where('is_accepted', true)->take(4)->get();
     }
 
     public function render()
