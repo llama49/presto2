@@ -2,15 +2,22 @@
 
 namespace App\Livewire;
 
-use App\Models\Announcement;
+use App\Models\Image;
 use Livewire\Component;
+use App\Models\Announcement;
 
 class IndexAnnouncements extends Component
 {
+    public $announcements;
+
+    public function mount()
+    {
+        $this->announcements = Announcement::orderBy('created_at', 'desc')->take(4)->get();
+    }
+
     public function render()
     {
-        /* visualizzazione in ordine di creazione e prende solo gli ultimi 4 */
-        $announcements = Announcement::orderBy('created_at', 'desc')->take(4)->get();
-        return view('livewire.index-announcements', compact('announcements'));
+
+        return view('livewire.index-announcements');
     }
 }

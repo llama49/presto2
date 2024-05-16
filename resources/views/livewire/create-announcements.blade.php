@@ -41,8 +41,26 @@
                 </div>
                 <div class="mb-3">
                     <label for="img" class="form-label">Inserisci l'immagine</label>
-                    <input wire:model="img" type="file" class="form-control shadow form_bordi" id="img">
+                    <input wire:model="temporary_images" name="images" multiple type="file" class="form-control shadow form_bordi" id="img">
+                    @error('temporary_images.*') <span class="error">{{ $message }}</span> @enderror
                 </div>
+                @if (!empty($images))
+                <div class="row">
+                    <div class="col-12">
+                        <p>photo preview</p>
+                        <div class="row">
+                            @foreach ($images as $key => $image)
+                                <div class="col">
+                                    <div class="img-preview" style="background-image: url({{$image->temporaryUrl()}});"></div>
+                                    <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">Cancella</button>
+                                </div>
+
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
+                @endif
                 <button type="submit" class="btn bottone_annuncio mt-3">Crea Annuncio</button>
             </form>
         </div>

@@ -22,6 +22,7 @@ class AnnouncementsController extends Controller
     public function indexAnnouncements(){
 
         $announcements = Announcement::orderBy('created_at', 'desc')->get();
+
         return view('announcements.index', compact('announcements'));
     }
 

@@ -13,60 +13,38 @@
                 {{-- swiper --}}
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class=" w-75 swiper mySwiper2">
                     <div class="swiper-wrapper">
+                      @if (count($announcement->images))
+                      @foreach ($announcement->images as $image)
+
                       <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        <img src="{{Storage::url($image->path)}}"/>
                       </div>
+
+                      @endforeach
+
+                      @else
+
                       <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        <img src="{{Storage::url('public/img/default-image.jpg')}}"/>
                       </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                      </div>
+
+                    @endif
+
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                   </div>
                   <div thumbsSlider="" class=" w-75 mt-2 swiper mySwiper">
                     <div class="swiper-wrapper">
+                      @if (count($announcement->images))
+                      @foreach ($announcement->images as $image)
+
                       <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        <img src="{{Storage::url($image->path)}}"/>
                       </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                      </div>
+
+                      @endforeach
+                    @endif
                     </div>
                   </div>
 
