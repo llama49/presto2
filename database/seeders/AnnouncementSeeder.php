@@ -20,7 +20,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '12',
                 'user_id' => '1',
                 'category_id' => '2',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'auto',
@@ -28,7 +28,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '15',
                 'user_id' => '2',
                 'category_id' => '2',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'bicicletta',
@@ -36,7 +36,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '20',
                 'user_id' => '3',
                 'category_id' => '6',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'computer',
@@ -44,7 +44,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '1000',
                 'user_id' => '4',
                 'category_id' => '3',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'libro',
@@ -52,7 +52,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '10',
                 'user_id' => '1',
                 'category_id' => '6',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'smartphone',
@@ -60,7 +60,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '500',
                 'user_id' => '2',
                 'category_id' => '3',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'casa',
@@ -68,7 +68,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '200000',
                 'user_id' => '3',
                 'category_id' => '1',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'giacca',
@@ -76,7 +76,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '150',
                 'user_id' => '4',
                 'category_id' => '7',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'orologio',
@@ -84,7 +84,7 @@ class AnnouncementSeeder extends Seeder
                 'price' => '300',
                 'user_id' => '1',
                 'category_id' => '7',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ],
             [
                 'title' => 'scarpe',
@@ -92,10 +92,10 @@ class AnnouncementSeeder extends Seeder
                 'price' => '80',
                 'user_id' => '2',
                 'category_id' => '7',
-                'img' => 'public/img/default-image.jpg'
+                /* 'img' => 'public/img/default-image.jpg' */
             ]
         ];
-        
+
 
         foreach ($array_announcement as $announcement) {
             Announcement::create($announcement);

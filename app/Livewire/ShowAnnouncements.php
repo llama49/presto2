@@ -9,8 +9,11 @@ class ShowAnnouncements extends Component
 {
     public $announcement;
 
+
+
     public function render()
-    {        
+    {
+
         return view('livewire.show-announcements');
     }
 }
