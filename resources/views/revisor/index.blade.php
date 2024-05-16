@@ -5,7 +5,14 @@
         {{ session('message') }}
     </div>
     @endif
-    
+
+    @if (session('error'))
+    <div class="alert rounded-3  alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
+
+
     <div class="container">
         <div class="row">
             <div class="col-12 mt-5">
@@ -62,7 +69,7 @@
         </div>
     </div>
     @endif
-    
+
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -74,7 +81,7 @@
             </div>
         </div>
     </div>
-    @if($announcements)
+    @if($announcements_checked)
     <div class="container my-5">
         <div class="row">
             <div class="col-12">

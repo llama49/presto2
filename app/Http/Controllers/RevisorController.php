@@ -34,7 +34,7 @@ class RevisorController extends Controller
     {
         $announcement->setAccepted(false);
 
-        return redirect()->back()->with('message', 'Hai rifiutato l\'annuncio');
+        return redirect()->back()->with('error', 'Hai rifiutato l\'annuncio');
 
     }
 
