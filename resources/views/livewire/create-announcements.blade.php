@@ -15,17 +15,17 @@
                 enctype="multipart/form-data"
                 >
                 <div class="mb-3">
-                    <label for="title" class="form-label">{{__('ui.title')}}</label>
+                    <label for="title" class="form-label">{{__('ui.title')}}*</label>
                     <input wire:model.blur="title" type="text" class="form_bordi shadow form-control" id="title">
                     <div class="text-danger">@error('title') {{ $message }} @enderror</div>
                 </div>
                 <div class="mb-3">
-                    <label for="body" class="form-label">{{__('ui.description')}}</label>
+                    <label for="body" class="form-label">{{__('ui.description')}}*</label>
                     <textarea wire:model.blur="body" class="form-control shadow form_bordi" id="body" cols="30" rows="8"></textarea>
                     <div class="text-danger">@error('body') {{ $message }} @enderror</div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">{{__('ui.category2')}}</label>
+                    <label class="form-label">{{__('ui.category2')}}*</label>
                     <select class="form-select shadow form_bordi" wire:model="category" aria-label="Default select example">
                         <option>{{__('ui.categorySelect')}}</option>
                         @foreach ($categories as $category)
@@ -35,7 +35,7 @@
                     <div class="text-danger">@error('category') {{ $message }} @enderror</div>
                 </div>
                 <div class="mb-3">
-                    <label for="price" class="form-label">{{__('ui.price')}}</label>
+                    <label for="price" class="form-label">{{__('ui.price')}}*</label>
                     <input wire:model.blur="price" type="number" class="form-control shadow form_bordi" id="price">
                     <div class="text-danger">@error('price') {{ $message }} @enderror</div>{{-- nuovo metodo di gestione degli errori per il client --}}
                 </div>
@@ -61,6 +61,7 @@
                 </div>
 
                 @endif
+                <p>* campi obbligatori</p>
                 <button type="submit" class="btn bottone_annuncio mt-3">{{__('ui.createAnnouncement3')}}</button>
             </form>
         </div>
