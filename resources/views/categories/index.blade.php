@@ -4,8 +4,9 @@
 
     {{-- @dd($category) --}}
     @if ($announcements->isEmpty())
-    
-    <h3 class="text-center mt-5 mb-5">{{__('ui.noCategory')}}</h3>
+    <div class="">
+        <h3 class="text-center mt-5 mb-5">{{__('ui.noCategory')}}</h3>
+    </div>
     @else
     <div class="container ">
         <div class="row mt-5 justify-content-center">

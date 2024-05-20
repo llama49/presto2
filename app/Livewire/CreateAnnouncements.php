@@ -2,14 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Models\Image;
 use Livewire\Component;
+use App\Models\Category;
+use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use App\Models\Announcements;
-use App\Models\Category;
-use App\Models\Image;
-use Illuminate\Support\Facades\Auth;
-use Livewire\Attributes\Validate;
 use Livewire\WithFileUploads;
+use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class CreateAnnouncements extends Component
 {
@@ -33,6 +35,8 @@ class CreateAnnouncements extends Component
     public $temporary_images;
 
     public $announcement;
+
+    public $newImage;
 
 
     use WithFileUploads;
@@ -62,8 +66,14 @@ class CreateAnnouncements extends Component
 
         if(count($this->images)){
             foreach ($this->images as $image) {
-                $announcement->images()->create(['path' => $image->store('images', 'public')]);
+                // $announcement->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "announcements/{$announcement->id}";
+                $newImage = $announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 300, 300));
             }
+
+            Storage::deleteDirectory('livewire-tmp');
         }
 
         $announcement->save();
