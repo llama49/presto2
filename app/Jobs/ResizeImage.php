@@ -4,11 +4,11 @@ namespace App\Jobs;
 
 use Spatie\Image\Image;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Enums\CropPosition;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Spatie\Image\Enums\CropPosition;
 
 class ResizeImage implements ShouldQueue
 {

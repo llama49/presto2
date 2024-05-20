@@ -70,7 +70,7 @@ class CreateAnnouncements extends Component
                 $newFileName = "announcements/{$announcement->id}";
                 $newImage = $announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 300, 300));
+                ResizeImage::dispatch($newImage->path, 300, 300);
             }
 
             Storage::deleteDirectory('livewire-tmp');
