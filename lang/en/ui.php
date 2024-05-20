@@ -44,29 +44,7 @@ return [
     'revisor1' => 'There are no ads to review',
     'revisor2' => 'There are no reviewed ads',
     'cancelReview' => 'Cancel review',
-
-    
-
-
-
-
-
-
-
-
-
-
-  
-
-    
-
-
-    
-
-
-
-
-
+    'Immobiliare' => 'Real estate',
 
 
 
