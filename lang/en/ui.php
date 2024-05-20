@@ -44,9 +44,20 @@ return [
     'revisor1' => 'There are no ads to review',
     'revisor2' => 'There are no reviewed ads',
     'cancelReview' => 'Cancel review',
+    'ReviewAnnouncement' => 'Here are the rejected ads',
+    'ReviewAnnouncement2' => 'There are no rejected ads',
+    'ViewRevisor' => 'Defer for review',
     'Immobiliare' => 'Real estate',
-
-
+    'Auto e moto' => 'Cars and Motorcycles',
+    'Elettronica' => 'Electronics',
+    'Lavoro' => 'Jobs',
+    'Arredamento e casa' => 'Furniture and Home',
+    'Sport e tempo libero' => 'Sports and Leisure',
+    'Abbigliamento e accessori' => 'Clothing and Accessories',
+    'Animali' => 'Animals',
+    'Collezionismo' => 'Collectibles',
+    'Arte' => 'Art',
+    'Strumenti Musicali' => 'Musical Instruments'
 
 
 

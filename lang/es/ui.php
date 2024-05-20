@@ -44,6 +44,24 @@ return [
     'revisor1' => 'Aquí están los anuncios revisados',
     'revisor2' => 'No se revisaron anuncios',
     'cancelReview' => 'Cancelar revisión',
+    'ReviewAnnouncement' => 'Aquí están los anuncios rechazados',
+    'ReviewAnnouncement2' => 'No hay anuncios rechazados',
+    'ViewRevisor' => 'Aplazar para revisión',
+    'Immobiliare' => 'Bienes raíces',
+    'Auto e moto' => 'Automóviles y Motocicletas',
+    'Elettronica' => 'Electrónica',
+    'Lavoro' => 'Trabajo',
+    'Arredamento e casa' => 'Muebles y Hogar',
+    'Sport e tempo libero' => 'Deportes y Tiempo Libre',
+    'Abbigliamento e accessori' => 'Ropa y Accesorios',
+    'Animali' => 'Animales',
+    'Collezionismo' => 'Coleccionismo',
+    'Arte' => 'Arte',
+    'Strumenti Musicali' => 'Instrumentos Musicales'
+    
+
+
+
 
 
 

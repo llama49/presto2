@@ -34,7 +34,7 @@
               </a>
               <ul class="dropdown-menu">
                 @foreach ($categories as $category )
-                <li><a class="dropdown-item" href="{{route('index.category', compact('category'))}}">{{$category->name}}</a></li>
+                <li><a class="dropdown-item" href="{{route('index.category', compact('category'))}}">{{__("ui.$category->name")}}</a></li>
                 @endforeach
               </ul>
             </li>

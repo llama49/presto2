@@ -44,6 +44,21 @@ return [
     'revisor1' => 'Ecco gli annunci revisionati',
     'revisor2' => 'Non ci sono annunci revisionati',
     'cancelReview' => 'Annulla revisione',
+    'ReviewAnnouncement' => 'Ecco gli annunci rifiutati',
+    'ReviewAnnouncement2' => 'Non ci sono annunci rifiutati',
+    'ViewRevisor' => 'Rimanda in revisione',
+    'Immobiliare' => 'Immobiliare',
+    'Auto e moto' => 'Auto e moto',
+    'Elettronica' => 'Elettronica',
+    'Lavoro' => 'Lavoro',
+    'Arredamento e casa' => 'Arredamento e casa',
+    'Sport e tempo libero' => 'Sport e tempo libero',
+    'Abbigliamento e accessori' => 'Abbigliamento e accessori',
+    'Animali' => 'Animali',
+    'Collezionismo' => 'Collezionismo',
+    'Arte' => 'Arte',
+    'Strumenti Musicali' => 'Strumenti Musicali'
+
 
 
 

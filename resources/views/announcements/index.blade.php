@@ -10,7 +10,7 @@
                 <div class="card d-block mx-auto" >
                     @if (count($announcement->images))
 
-                    <img src="{{Storage::url($announcement->images->first()->path)}}" class="card-img-top shadow" alt="...">
+                    <img src="{{$announcement->images->first()->getUrl(300,300)}}" class="card-img-top shadow" alt="...">
 
                     @else
                     <img src="{{Storage::url('public/img/default-image.jpg')}}" class="card-img-top shadow" alt="...">
