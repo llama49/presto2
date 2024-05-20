@@ -69,6 +69,8 @@ return [
     'required3' => 'campi obbligatori',
     'delete' => 'Cancella',
     'preview' => 'Anteprima immagine',
+    'requested' => 'Hai giá inviato la tua richiesta',
+    
 
 
 

@@ -69,6 +69,7 @@ return [
     'required3' => 'required fields',
     'delete' => 'Delete',
     'preview' => 'Photo preview',
+    'requested' => 'You have already submitted your request',
 
     
 
