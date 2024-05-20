@@ -44,6 +44,11 @@ return [
     'revisor1' => 'There are no ads to review',
     'revisor2' => 'There are no reviewed ads',
     'cancelReview' => 'Cancel review',
+    'ReviewAnnouncement' => 'Here are the rejected ads',
+    'ReviewAnnouncement2' => 'There are no rejected ads',
+    'ViewRevisor' => 'Defer for review',
+
+
 
     
 

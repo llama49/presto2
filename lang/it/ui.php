@@ -44,6 +44,9 @@ return [
     'revisor1' => 'Ecco gli annunci revisionati',
     'revisor2' => 'Non ci sono annunci revisionati',
     'cancelReview' => 'Annulla revisione',
+    'ReviewAnnouncement' => 'Ecco gli annunci rifiutati',
+    'ReviewAnnouncement2' => 'Non ci sono annunci rifiutati',
+    'ViewRevisor' => 'Rimanda in revisione',
 
 
 

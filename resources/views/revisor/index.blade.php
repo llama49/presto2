@@ -124,9 +124,9 @@
         <div class="row">
             <div class="col-12">
                 @if ($announcements_refused)
-                <h1 class="text-center">Ecco gli annunci rifiutati</h1>
+                <h1 class="text-center">{{__('ui.ReviewAnnouncement')}}</h1>
                 @else
-                <h1 class="text-center">Non ci sono annunci rifiutati</h1>
+                <h1 class="text-center">{{__('ui.ReviewAnnouncement2')}}</h1>
                 @endif
             </div>
         </div>
@@ -139,9 +139,9 @@
                     <thead>
                         <tr>
                             <th class="riga_body" scope="col">#</th>
-                            <th class="riga_body" scope="col">Titolo</th>
-                            <th class="riga_body" scope="col">Prezzo</th>
-                            <th class="riga_body" scope="col">Data creazione</th>
+                            <th class="riga_body" scope="col">{{__('ui.title')}}</th>
+                            <th class="riga_body" scope="col">{{__('ui.price')}}</th>
+                            <th class="riga_body" scope="col">{{__('ui.creation')}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -158,7 +158,7 @@
                                 <form action="{{route('revisor.undo_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
                                     @csrf
                                     @method("PATCH")
-                                    <button class="btn btn-success" type="submit" >Rimanda in revisione</button>
+                                    <button class="btn btn-success" type="submit" >{{__('ui.ViewRevisor')}}</button>
                                 </form>
                             </td>
                         </tr>

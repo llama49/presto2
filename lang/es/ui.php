@@ -44,6 +44,11 @@ return [
     'revisor1' => 'Aquí están los anuncios revisados',
     'revisor2' => 'No se revisaron anuncios',
     'cancelReview' => 'Cancelar revisión',
+    'ReviewAnnouncement' => 'Aquí están los anuncios rechazados',
+    'ReviewAnnouncement2' => 'No hay anuncios rechazados',
+    'ViewRevisor' => 'Aplazar para revisión',
+
+
 
 
 
