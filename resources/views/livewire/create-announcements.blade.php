@@ -4,11 +4,7 @@
             <h3 class="text-center mb-5 my_title">{{__('ui.createAnnouncement2')}}</h3>
             <div class="col-12 col-md-8 col-lg-6">
 
-                @if (session('message'))
-                <div class="alert rounded-3  alert-success">
-                    {{ session('message') }}
-                </div>
-                @endif
+              <x-message/>
 
                 <form class="p-5 shadow"
                 wire:submit="store"
@@ -29,7 +25,7 @@
                     <select class="form-select shadow form_bordi" wire:model="category" aria-label="Default select example">
                         <option>{{__('ui.categorySelect')}}</option>
                         @foreach ($categories as $category)
-                        <option  value="{{$category->id}}">{{$category->name}}</option>
+                        <option  value="{{$category->id}}">{{__("ui.$category->name")}}</option>
                         @endforeach
                     </select>
                     <div class="text-danger">@error('category') {{ $message }} @enderror</div>
@@ -47,13 +43,13 @@
                 @if (!empty($images))
                 <div class="row">
                     <div class="col-12">
-                        <p>photo preview</p>
+                        <p>{{__('ui.preview')}}</p>
                         <div class="row">
                             @foreach ($images as $key => $image)
                                 <div class="col">
                                     <div class="img-preview" style="background-image: url({{$image->temporaryUrl()}});"></div>
-                                    <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">Cancella</button>
-                                </div>
+                                    <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
+                                </div> 
 
                             @endforeach
                         </div>
@@ -61,7 +57,7 @@
                 </div>
 
                 @endif
-                <p>* campi obbligatori</p>
+                <p>* {{__('ui.required3')}}</p>
                 <button type="submit" class="btn bottone_annuncio mt-3">{{__('ui.createAnnouncement3')}}</button>
             </form>
         </div>

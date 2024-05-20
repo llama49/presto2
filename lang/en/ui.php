@@ -57,8 +57,23 @@ return [
     'Animali' => 'Animals',
     'Collezionismo' => 'Collectibles',
     'Arte' => 'Art',
-    'Strumenti Musicali' => 'Musical Instruments'
+    'Strumenti Musicali' => 'Musical Instruments',
+    'acceptedAnnouncement' => 'You have accepted the announcement',
+    'rejectedAnnouncement' => 'You have rejected the announcement',
+    'restore' => ' You have restored the review',
+    'revisor3' => 'You have successfully requested to become a reviewer',
+    'revisor4' => 'The user has become a reviewer',
+    'required' => 'The field is required.',
+    'required2' => 'The title must have at least 3 characters.',
+    'created' => 'Article created',
+    'required3' => 'required fields',
+    'delete' => 'Delete',
+    'preview' => 'Photo preview',
 
+    
+
+
+    
 
 
 ]

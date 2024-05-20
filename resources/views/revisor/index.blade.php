@@ -1,16 +1,8 @@
 <x-layout>
 
-    @if (session('message'))
-    <div class="alert rounded-3  alert-success">
-        {{ session('message') }}
-    </div>
-    @endif
+   <x-message/>
 
-    @if (session('error'))
-    <div class="alert rounded-3  alert-danger">
-        {{ session('error') }}
-    </div>
-    @endif
+    <x-error/>
 
 
     <div class="container">

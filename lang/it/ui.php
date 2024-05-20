@@ -57,7 +57,27 @@ return [
     'Animali' => 'Animali',
     'Collezionismo' => 'Collezionismo',
     'Arte' => 'Arte',
-    'Strumenti Musicali' => 'Strumenti Musicali'
+    'Strumenti Musicali' => 'Strumenti Musicali',
+    'acceptedAnnouncement' => 'Hai accettato l\'annuncio',
+    'rejectedAnnouncement' => 'Hai rifiutato l\'annuncio',
+    'restore' => 'Hai ripristinato la revisione',
+    'revisor3' => 'Hai richiesto di diventare revisore correttamente',
+    'revisor4' => 'L\'utente è diventato revisore',
+    'required' => 'Il campo è obligatorio.',
+    'required2' => 'Il titolo deve avere almeno 3 caratteri.',
+    'created' => 'Articolo creato',
+    'required3' => 'campi obbligatori',
+    'delete' => 'Cancella',
+    'preview' => 'Anteprima immagine',
+
+
+
+
+
+    
+ 
+    
+
 
 
 

@@ -15,17 +15,17 @@ use Illuminate\Support\Facades\Storage;
 
 class CreateAnnouncements extends Component
 {
-    #[Validate('required', message: 'Il campo è obligatorio.')]
-    #[Validate('min:5', message: 'Il titolo deve avere almeno 3 caratteri.')]
+    #[Validate('required', message: 'ui.required')]
+    #[Validate('min:3', message: 'ui.required2')]
     public $title;
 
-    #[Validate('required', message: 'Il campo è obligatorio.')]
+    #[Validate('required', message: 'ui.required')]
     public $body;
 
-    #[Validate('required', message: 'Il campo è obligatorio.')]
+    #[Validate('required', message: 'ui.required')]
     public $price;
 
-    #[Validate('required', message: 'Il campo è obligatorio.')]
+    #[Validate('required', message: 'ui.required')]
     public $category;
 
     #[Validate(['images.*' => 'image|max:1024'])]
@@ -79,7 +79,7 @@ class CreateAnnouncements extends Component
         $announcement->save();
 
         /* messaggio di errore direttamente con livewire */
-        session()->flash('message', 'Articolo creato');
+        session()->flash('message', __('ui.created'));
 
         $this->reset();
         // serve per svuotare i campi
