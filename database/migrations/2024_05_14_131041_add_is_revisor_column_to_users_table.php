@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
 
-            $table->boolean('is_revisor')->default(false)->after('password');
+            $table->boolean('is_revisor')->nullable()->default(false)->after('password');
 
         });
     }

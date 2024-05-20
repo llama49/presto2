@@ -22,7 +22,9 @@
   </li>
 </ul>
 <div class="col-12 d-flex flex-column align-items-center">
-  <a class="btn bottone_annuncio" href="{{route('work.withUs')}}">{{__('ui.work')}}</a>
+  
+  <a class="btn bottone_annuncio @if (Auth::user() && Auth::user()->is_revisor) d-none @endif" href="{{route('work.withUs')}}">{{__('ui.work')}}</a>
+  
 </div>
 </footer>
 </div>

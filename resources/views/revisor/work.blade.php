@@ -1,9 +1,13 @@
 <x-layout>
-
-
+    
+    
     <div class="container">
         <div class="row justify-content-center mt-5">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 vh-100">
+                @if (Auth::user()->is_revisor === null)
+                    <h1 class="mt-5">Hai giá inviato la tua richiesta</h1>
+                @else
+                
                 <form class="shadow p-5 bg-trasparent"
                 action="{{route('work.revisor')}}"
                 method="POST"
@@ -21,8 +25,9 @@
                     <label for="body" class="form-label">{{__('ui.workWithUs')}}</label>
                     <textarea name="body" class="form-control shadow form_bordi" id="body" cols="30" rows="8"></textarea>
                 </div>
-                    <button type="submit" class="btn bottone_annuncio2">{{__('ui.send')}}</button>
-            </form>
+                <button type="submit" class="btn bottone_annuncio2">{{__('ui.send')}}</button>
+                </form>
+                @endif
             </div>
         </div>
     </div>
