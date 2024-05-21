@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionSafeSearch;
 use App\Models\Image;
 use Livewire\Component;
 use App\Models\Category;
@@ -71,6 +72,8 @@ class CreateAnnouncements extends Component
                 $newImage = $announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
 
                 ResizeImage::dispatch($newImage->path, 300, 300);
+
+                GoogleVisionSafeSearch::dispatch($newImage->id);
             }
 
             Storage::deleteDirectory('livewire-tmp');

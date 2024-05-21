@@ -4,7 +4,6 @@
 
     <x-error/>
 
-
     <div class="container">
         <div class="row">
             <div class="col-12 mt-5">
@@ -16,6 +15,11 @@
             </div>
         </div>
     </div>
+    {{-- @foreach ($announcements_prova as $announcement)
+
+    @dd($announcement->title);
+
+    @endforeach --}}
     @if($announcements)
     <div class="container my-5">
         <div class="row">
@@ -27,15 +31,32 @@
                             <th class="riga_body" scope="col">{{__('ui.title')}}</th>
                             <th class="riga_body" scope="col">{{__('ui.price')}}</th>
                             <th class="riga_body" scope="col">{{__('ui.creation')}}</th>
+                            <th class="riga_body" scope="col">Controllo immagini</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {{-- @dd($announcements); --}}
                         @foreach ($announcements as $announcement)
+
+
                         <tr class="border-bottom">
-                            <th scope="row">{{$announcement['id']}}</th>
-                            <td>{{$announcement['title']}}</td>
-                            <td>{{$announcement['price']}}$</td>
-                            <td>{{\Carbon\Carbon::parse($announcement['created_at'])->format('d/m/Y') }}</td>
+                            <th scope="row">{{$announcement->id}}</th>
+                            <td>{{$announcement->title}}</td>
+                            <td>{{$announcement->price}}$</td>
+                            <td>{{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y') }}</td>
+                            @foreach ($announcement->images as $image)
+                            @if ()
+
+                            @endif
+
+                            <td>Adulti <span class="{{$image->adult}}"></span></td>
+                            <td>Satira <span class="{{$image->spoof}}"></span></td>
+                            <td>Medicina <span class="{{$image->medical}}"></span></td>
+                            <td>Violenza <span class="{{$image->violence}}"></span></td>
+                            <td>Contenuto Ammiccante <span class="{{$image->racy}}"></span></td>
+
+                            @endforeach
+
                             <td class="riga_body">
                                 <a href="{{route('show.announcements', ['announcement' => $announcement['id']])}}" class="btn bottone_annuncio3 d-block mx-auto"><i class="bi bi-eye"></i></a>
                             </td>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
@@ -14,13 +15,19 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        $announcements = Announcement::where('is_accepted', null)->get()->toArray();
+        $announcements = Announcement::where('is_accepted', null)->get();
 
         $announcements_checked = Announcement::where('is_accepted', true)->get()->toArray();
 
         $announcements_refused = Announcement::where('is_accepted', false)->get()->toArray();
 
-        return view('revisor.index', compact('announcements', 'announcements_checked', 'announcements_refused'));
+        $announcements_prova = Announcement::where('is_accepted', null)->get();
+
+
+
+
+
+        return view('revisor.index', compact('announcements', 'announcements_checked', 'announcements_refused', 'announcements_prova'));
 
     }
 
@@ -53,7 +60,7 @@ class RevisorController extends Controller
         Auth::user()->is_revisor = NULL;
         Auth::user()->save();
         return redirect('/')->with('message', __('ui.revisor3'));
-        
+
     }
 
     public function makeRevisor(User $user){
