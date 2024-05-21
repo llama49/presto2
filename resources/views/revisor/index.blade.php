@@ -1,9 +1,9 @@
 <x-layout>
-
-   <x-message/>
-
+    
+    <x-message/>
+    
     <x-error/>
-
+    
     <div class="container">
         <div class="row">
             <div class="col-12 mt-5">
@@ -15,11 +15,7 @@
             </div>
         </div>
     </div>
-    {{-- @foreach ($announcements_prova as $announcement)
-
-    @dd($announcement->title);
-
-    @endforeach --}}
+    
     @if($announcements)
     <div class="container my-5">
         <div class="row">
@@ -31,32 +27,40 @@
                             <th class="riga_body" scope="col">{{__('ui.title')}}</th>
                             <th class="riga_body" scope="col">{{__('ui.price')}}</th>
                             <th class="riga_body" scope="col">{{__('ui.creation')}}</th>
+                            <th class="riga_body" scope="col">Elementi foto</th>
                             <th class="riga_body" scope="col">Controllo immagini</th>
+                            <th class="riga_body" scope="col"></th>
+                            <th class="riga_body" scope="col"></th>
+                            <th class="riga_body" scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @dd($announcements); --}}
                         @foreach ($announcements as $announcement)
-
-
                         <tr class="border-bottom">
                             <th scope="row">{{$announcement->id}}</th>
                             <td>{{$announcement->title}}</td>
                             <td>{{$announcement->price}}$</td>
                             <td>{{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y') }}</td>
-                            @foreach ($announcement->images as $image)
-                            @if ()
-
-                            @endif
-
-                            <td>Adulti <span class="{{$image->adult}}"></span></td>
-                            <td>Satira <span class="{{$image->spoof}}"></span></td>
-                            <td>Medicina <span class="{{$image->medical}}"></span></td>
-                            <td>Violenza <span class="{{$image->violence}}"></span></td>
-                            <td>Contenuto Ammiccante <span class="{{$image->racy}}"></span></td>
-
-                            @endforeach
-
+                            <td>
+                                @foreach ($announcement->images as $image)
+                                @if ($image->labels)
+                                @foreach ($image->labels as $label)
+                                <span class="d-inline">{{$label}} /</span>
+                                @endforeach
+                                @endif
+                                @endforeach
+                            </td>
+                            <td>
+                                @foreach ($announcement->images as $image)
+                                <div class="d-flex flex-wrap">
+                                    <div class="me-3">Adulti <span class="{{$image->adult}} ms-1"></span></div>
+                                    <div class="me-3">Satira <span class="{{$image->spoof}} ms-1"></span></div>
+                                    <div class="me-3">Medicina <span class="{{$image->medical}} ms-1"></span></div>
+                                    <div class="me-3">Violenza <span class="{{$image->violence}} ms-1"></span></div>
+                                    <div>Contenuto Ammiccante <span class="{{$image->racy}} ms-1"></span></div>
+                                </div>
+                                @endforeach
+                            </td>
                             <td class="riga_body">
                                 <a href="{{route('show.announcements', ['announcement' => $announcement['id']])}}" class="btn bottone_annuncio3 d-block mx-auto"><i class="bi bi-eye"></i></a>
                             </td>
@@ -64,14 +68,14 @@
                                 <form action="{{route('revisor.accept_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
                                     @csrf
                                     @method("PATCH")
-                                    <button class="btn btn-success d-block mx-auto" type="submit" ><i class="bi bi-check2"></i></button>
+                                    <button class="btn btn-success d-block mx-auto" type="submit"><i class="bi bi-check2"></i></button>
                                 </form>
                             </td>
                             <td class="riga_body">
                                 <form action="{{route('revisor.refuses_Announcement', ['announcement' => $announcement['id']])}}" method="POST">
                                     @csrf
                                     @method("PATCH")
-                                    <button class="btn btn-danger d-block mx-auto" type="submit" ><i class="bi bi-x-lg"></i></button>
+                                    <button class="btn btn-danger d-block mx-auto" type="submit"><i class="bi bi-x-lg"></i></button>
                                 </form>
                             </td>
                         </tr>
@@ -82,7 +86,8 @@
         </div>
     </div>
     @endif
-
+    
+    
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -132,7 +137,7 @@
         </div>
     </div>
     @endif
-
+    
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -182,6 +187,6 @@
         </div>
     </div>
     @endif
-
-
+    
+    
 </x-layout>

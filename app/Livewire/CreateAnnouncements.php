@@ -2,7 +2,6 @@
 
 namespace App\Livewire;
 
-use App\Jobs\GoogleVisionSafeSearch;
 use App\Models\Image;
 use Livewire\Component;
 use App\Models\Category;
@@ -11,6 +10,8 @@ use App\Models\Announcement;
 use App\Models\Announcements;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -74,6 +75,8 @@ class CreateAnnouncements extends Component
                 ResizeImage::dispatch($newImage->path, 300, 300);
 
                 GoogleVisionSafeSearch::dispatch($newImage->id);
+
+                GoogleVisionLabelImage::dispatch($newImage->id);
             }
 
             Storage::deleteDirectory('livewire-tmp');
