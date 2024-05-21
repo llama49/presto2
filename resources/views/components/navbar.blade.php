@@ -14,7 +14,7 @@
     </div>
     <div class="col-12">
       <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="d-flex me-auto">
+        <div class="d-flex me-auto ms-5">
           <form action="{{route('search.announcements')}}" method="GET" class="d-flex" role="search">
             <button class="btn" type="submit"><i class="bi bi-search"></i></button>
             <input name="searched" class="form-control" type="search" placeholder="Search" aria-label="Search">
@@ -40,13 +40,13 @@
             </li>
           </ul>
         </div>
-        
-        <div class="d-flex ms-auto">
-          
+
+        <div class="d-flex ms-auto me-5">
+
           {{-- Dropdown Lingue --}}
           <div class="dropdown">
             <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-globe-europe-africa fs-2"></i>
+              <i class="bi bi-globe-europe-africa fs-3"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-lg-end">
               <li class="dropdown-item">
@@ -60,14 +60,14 @@
               </li>
             </ul>
           </div>
-          
+
           {{-- Dropdown profilo --}}
           <div class="dropdown">
             <button class="btn" type="button" data-bs-toggle="dropdown">
-              <i class="bi bi-person-circle fs-2"></i>
+              <i class="bi bi-person-circle fs-3"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-lg-end">
-              
+
               @if (Auth::user() && Auth::user()->is_revisor)
               <li class="nav-item ps-4 border-bottom">
                 <a class="nav-link my-2 position-relative  link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.requests')}}
@@ -78,12 +78,12 @@
                 </a>
               </li>
               @endif
-              
+
               @guest
               <li class="nav-item"><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
               <li class="nav-item"><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
               @endguest
-              
+
               @auth
               <li class="nav-item"><form
                 class="d-flex"
@@ -99,7 +99,6 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 </nav>
-

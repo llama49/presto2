@@ -47,9 +47,9 @@
                         <div class="row">
                             @foreach ($images as $key => $image)
                                 <div class="col">
-                                    <div class="img-preview" style="background-image: url({{$image->temporaryUrl()}});"></div>
+                                    <div class="img-preview  " style="background-image: url({{$image->temporaryUrl()}});"></div>
                                     <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
-                                </div> 
+                                </div>
 
                             @endforeach
                         </div>

@@ -16,28 +16,28 @@ class UserSeeder extends Seeder
     {
         $array_users = [
             [
-                'name' => 'Linda',
-                'email' => 'linda@mail',
+                'name' => 'Antonio',
+                'email' => 'antonio@mail',
                 'password' => Hash::make('12345678'),
             ],
             [
-                'name' => 'Pino',
-                'email' => 'pino@mail',
+                'name' => 'Emanuele',
+                'email' => 'emanuele@mail',
                 'password' => Hash::make('12345678'),
                 'is_revisor' => true
             ],
             [
-                'name' => 'Matthew S.',
-                'email' => 'matt@mail',
+                'name' => 'Giuseppe',
+                'email' => 'giuseppe@mail',
                 'password' => Hash::make('12345678'),
             ],
             [
-                'name' => 'Mac',
-                'email' => 'mac@mail',
+                'name' => 'Giorgio',
+                'email' => 'giorgio@mail',
                 'password' => Hash::make('12345678'),
             ]
         ];
-        
+
         foreach ($array_users as $user) {
             User::create($user);
         }
