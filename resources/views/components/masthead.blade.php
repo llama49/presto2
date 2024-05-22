@@ -12,7 +12,7 @@
           @endguest
             <h1 class="fw-light my_title fs-3">{{__('ui.home')}}<strong class="bordo" >Presto.it</strong></h1>
           <a href="@if (Auth::user())
-            {{route('create.announcements')}}@else{{route('register')}}
+            {{route('create.announcements')}}@else{{route('login')}}
             @endif" class="btn bottone_annuncio mt-3">{{__('ui.createAnnouncement')}}</a>
         </div>
       </div>
