@@ -13,7 +13,7 @@ body{
 }
 
 .form_dati{
-    height: 60vh;
+    height: 90vh;
 }
 
 .my_title{
@@ -111,6 +111,18 @@ body{
         height: 250px;
         overflow: hidden;
     }
+    .bottone_annuncio{
+        background-color: var(--sec-color) !important;
+        border: none !important;
+        color: white !important;
+        padding: 0px !important;
+        border-radius: 1px;
+        width: 200px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width: 200px) and (max-width: 992px) {
@@ -125,7 +137,6 @@ body{
     .posizione_link{
         margin-left: 0px;
     }
-    
 }
 
 .bottone_annuncio{
@@ -188,6 +199,13 @@ body{
     opacity: 0.8;
 }
 
+.badge_person{
+    position: absolute;
+    font-size: 10px;
+    left: 40px;
+    top: 16px;
+}
+
 .carousel-control-prev-icon{
     transform: scale(2);
 
@@ -209,6 +227,14 @@ body{
     transition: 0.4s;
     border: none !important;
     background-color: transparent;
+}
+
+.colore_badge{
+    background-color: var(--sec-color);
+}
+
+.card-body{
+    height: 200px;
 }
 
 .card-img-top{
@@ -248,6 +274,23 @@ body{
     background-size: cover;
     width: 300px;
     height: 300px;
+}
+
+.posizione_delete{
+    position: absolute;
+    top: 10px;
+    right: -3px;
+}
+
+.posizione_delete:hover{
+    background-color: transparent;
+}
+
+.btn_delete{
+    background-color: red;
+    padding: 8px 10px;
+    border-radius: 50%;
+    color: white;
 }
 
 .messaggio_category{

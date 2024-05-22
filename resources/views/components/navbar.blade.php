@@ -14,7 +14,7 @@
     </div>
     <div class="col-12">
       <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="d-flex me-auto ms-5">
+        <div class="d-flex me-auto ms-md-5">
           <form action="{{route('search.announcements')}}" method="GET" class="d-flex" role="search">
             <button class="btn" type="submit"><i class="bi bi-search"></i></button>
             <input name="searched" class="form-control" type="search" placeholder="Search" aria-label="Search">
@@ -50,32 +50,32 @@
             </button>
             <ul class="dropdown-menu dropdown-menu-lg-end">
               <li class="dropdown-item">
-                <x-_locale lang="it" /><span>Italiano</span>
+                <x-_locale lang="it">Italiano</x-_locale>
               </li>
               <li class="dropdown-item">
-                <x-_locale lang="es" /><span>Español</span>
+                <x-_locale lang="es">Español</x-_locale>
               </li>
               <li class="dropdown-item">
-                <x-_locale lang="en" /><span>English</span>
+                <x-_locale lang="en">English</x-_locale>
               </li>
             </ul>
           </div>
 
           {{-- Dropdown profilo --}}
           <div class="dropdown">
-            <button class="btn" type="button" data-bs-toggle="dropdown">
+            <button class="btn position-relative" type="button" data-bs-toggle="dropdown">
               <i class="bi bi-person-circle fs-3"></i>
             </button>
+            @if (App\Models\Announcement::toBeRevisionedCount() > 0)  
+            <span class="badge_person translate-middle badge rounded-pill bg-danger">
+              {{App\Models\Announcement::toBeRevisionedCount()}}
+            </span>
+            @endif
             <ul class="dropdown-menu dropdown-menu-lg-end">
 
               @if (Auth::user() && Auth::user()->is_revisor)
               <li class="nav-item ps-4 border-bottom">
-                <a class="nav-link my-2 position-relative  link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.requests')}}
-                  <span class="translate-middle badge rounded-pill bg-danger">
-                    {{App\Models\Announcement::toBeRevisionedCount()}}
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
-                </a>
+                <a class="nav-link my-2 position-relative  link_custom @if (Route::currentRouteName()== 'welcome') link_custom2 @endif" aria-current="page" href="{{route('revisor.index')}}">Dashboard</a>
               </li>
               @endif
 

@@ -47,7 +47,7 @@
                                 <div class="dropdown mb-2">
                                     <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         
-                                        Elementi foto {{$image->id}}
+                                        Elementi foto
                                         
                                     </button>
                                     <ul class="dropdown-menu">
@@ -63,7 +63,7 @@
                                     <div class="dropdown mb-2">
                                         <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             
-                                            Foto {{$image->id}}
+                                            Stato foto
                                             
                                         </button>
                                         <ul class="dropdown-menu">
@@ -74,13 +74,6 @@
                                             <li class="dropdown-item"><div class="">Contenuto Ammiccante <span class="{{$image->racy}} ms-1"></span></div></li>
                                         </ul>
                                     </div>
-                                    {{-- <div class="d-flex flex-wrap">
-                                        <div class="me-3">Adulti <span accordion class="{{$image->adult}} ms-1"></span></div>
-                                        <div class="me-3">Satira <span class="{{$image->spoof}} ms-1"></span></div>
-                                        <div class="me-3">Medicina <span class="{{$image->medical}} ms-1"></span></div>
-                                        <div class="me-3">Violenza <span class="{{$image->violence}} ms-1"></span></div>
-                                        <div class="mb-3">Contenuto Ammiccante <span class="{{$image->racy}} ms-1"></span></div>
-                                    </div> --}}
                                     @endforeach
                                 </td>
                                 <td class="riga_body">
