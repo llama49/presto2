@@ -2,7 +2,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-2 d-none d-lg-inline mt-5 mb-3">
+            <div class="col-6 col-lg-2 d-inline d-lg-inline mt-5 mb-3">
                 <a href="{{url()->previous()}}" class="btn bottone_indietro">← {{__('ui.back')}}</a>
             </div>
             <div class="col-12 col-lg-8 mt-5 mb-3">

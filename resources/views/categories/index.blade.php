@@ -10,7 +10,7 @@
     @else
     <div class="container ">
         <div class="row mt-5 justify-content-center">
-            <h2 class="my_title text-center">{{$category->name}}</h2>
+            <h2 class="my_title text-center">{{__("ui.$category->name")}}</h2>
             @foreach ($announcements as $announcement)
             <div class="col-8 col-md-5 col-lg-3 my-3 p-3">
                 <div class="card d-block mx-auto">

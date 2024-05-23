@@ -66,10 +66,12 @@
             <button class="btn position-relative" type="button" data-bs-toggle="dropdown">
               <i class="bi bi-person-circle fs-3"></i>
             </button>
+            @if (Auth::user() && Auth::user()->is_revisor)
             @if (App\Models\Announcement::toBeRevisionedCount() > 0)  
             <span class="badge_person translate-middle badge rounded-pill bg-danger">
               {{App\Models\Announcement::toBeRevisionedCount()}}
             </span>
+            @endif
             @endif
             <ul class="dropdown-menu dropdown-menu-lg-end">
 
